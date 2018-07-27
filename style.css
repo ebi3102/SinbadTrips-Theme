@@ -1,0 +1,427 @@
+/*
+Theme Name: Sinbadtrips
+Author: Ebrahim Moeini
+Author URI: http://sinbadtrips.com
+Version: 1.1.1
+Changes:
+in this Version content.php and it's style have been changed
+add numeric paginaton to theme
+add sin-clear class to style.css
+with this class remove the effect of float: left in content.php
+this class add to below pages:
+page-template/home-page.php
+page-template/itinerary-page.php
+index.php
+archive.php
+*/
+
+*{
+	box-sizing: border-box;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
+body {
+	font-family: Tahoma , sans-serif;
+	font-size: 16px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+h2{
+	font-family: Tahoma, sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+a:link,
+a:visited {
+	color: #3a3a3a;
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+/* General Layout */
+div.container {
+	max-width: 100%;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+}
+
+article.post {
+	border-bottom: 2px dotted #bbbbbb;
+	padding: 5px;
+}
+
+article.post:last-of-type {
+	border-bottom: none;
+}
+
+/* Header */
+
+.top{
+	background-color: #3a3a3a;
+	height: 42px;
+	color: #f0f0f0;
+
+}
+
+.top-header{
+	float: left;
+	margin: 10px 10px;
+	
+}
+
+
+.top-header:before, .top-header:after { content: ""; display: table; }
+.top-header { *zoom: 1; }
+.top-header a:link,
+.top-header a:visited {
+	display: inline;
+	padding: 10px 18px;
+	text-decoration: none;
+	color: #f0f0f0;
+}
+.top-prof{
+	float: left;
+}
+.top-prof div{
+	text-align: right;
+	margin: 10px;
+	padding: 10px;
+}
+
+.site-header {
+	width: 300px;
+	margin: 0 auto;
+	height: 149px;
+	text-align: center;
+
+}
+
+/* Footer */
+.site-footer {
+	margin-top: 30px;
+	border-top: 2px solid #999;
+}
+
+/*Navigation Menus */
+.site-nav {
+	width: 600px;
+}
+.site-nav ul {
+	margin: 0;
+	padding:0 0 0 20px ;
+}
+
+.site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
+.site-nav ul:after { clear: left; }
+.site-nav ul { *zoom: 1; }
+.site-nav ul li {
+	list-style: none;
+	float: left; 
+}
+
+/* Site Header Menue */
+
+.site-header nav ul li {
+
+	margin-right: 5px;
+}
+.site-header nav ul li a:link,
+.site-header nav ul li a:visited {
+	display: block;
+	padding: 10px 10px;
+	/*border: 1px solid #BBB;
+	border-bottom: none;*/
+	text-decoration: none;
+}
+
+.site-header nav ul li a:hover {
+	background-color: #ECECEC;
+}
+
+.site-header nav ul li.current-menu-item a:link,
+.site-header nav ul li.current-menu-item a:visited {
+	/*background-color: #006ec3;*/
+	color: #c0392b;
+	font-weight: 600;
+}
+
+/*Footer*/
+.site-footer {
+	background-color: #3a3a3a;
+	color: #f0f0f0;
+	clear: both;
+	padding: 20px;
+}
+.site-footer p {
+	text-align: center;
+}
+
+/* Footer Menu */
+.site-footer nav ul li {
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted #BBB;
+}
+
+.site-footer nav ul li a:link,
+.site-footer nav ul li a:visited {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+.clear {	clear: both;}
+
+/* homeSlideshow */
+.homeSlide {
+	max-width: 100%;
+	width: 100%;
+	margin-top: 20px;
+	padding: 0;
+
+}
+
+/* Read More Button */
+
+.read-more {
+    text-align: center;
+    margin: 20px 0 ;
+    float: right;
+    width: 150px;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    background-color: #eb6826;
+    color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0;
+}
+
+.read-more:hover {
+    background-color: #eb9e77; 
+}
+
+/* body-container */
+
+.body-container {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px 20px;
+}
+
+/*Page Layout */
+article.page h2 {
+	font-size: 300%;
+}
+
+/*Image */
+img {
+	max-width: 100% ;
+	height: auto;
+}
+
+
+/* post template */
+
+.post-img {
+	margin: auto;
+	text-align: center;
+}
+
+.post-body{
+	text-align: justify;
+}
+
+
+
+
+/*Style for content template part*/
+.sin-box {
+	position: relative;
+	width:280px;
+	height: 200px;
+	float: left;
+	margin:0 10px 10px 0;
+	padding:0;
+	text-align: center;	
+}
+
+.sin-box img {
+  width:100%;
+  padding: 0;
+  height: 200px;
+  text-align: center;
+  border-radius: 5px;
+}
+.sin-image::after {
+  display: block;
+  position: relative;
+  background-image:linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.0));
+  margin-top: -150px;
+  height: 147px;
+  width: 100%;
+  content: '';
+  border-radius: 5px;
+}
+.sin-image:hover{
+	opacity: 0.8;
+	transition: 0.8s;
+}
+.sin-text,
+.sin-text a {
+	left: 1px;
+	color: #f2f2f2;
+	font-size: 24px;
+	text-decoration: none;
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	margin:auto;
+}
+.sin-text:hover {
+	position: absolute;
+	bottom: 30px;
+	/*transform: scale(1.25);*/
+	transition: 0.5s;
+}
+
+.sin-clear {
+	clear: both;
+}
+
+
+/* Comment Form Style */
+
+#respond { 
+background: #ececec;
+padding: 5px 10px;
+}
+ 
+/* Highlight active form field */
+ 
+#respond input[type=text], input[type=email], textarea {
+  font-family: Tahoma , sans-serif;
+  font-size: 16px;	
+  padding:12px 20px;
+  margin: 8px 0;
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 6px;
+}
+   
+#respond input[type=text]:focus,  input[type=email]:focus
+  margin: 8px 0;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+#submit {
+color: #ffffff;
+font-size: 20px;
+padding: 15px;
+text-decoration: none;
+background-color: #eb6826;
+border-radius: 6px;
+box-shadow: 0;
+} 
+ 
+#submit:hover {
+	background-color: #eb9e77; 
+}
+
+/* Comments List Style */
+.comments-area {
+	width:100%;
+	padding: 5px;
+}
+
+.comments-area ol {
+	list-style-type: none;
+}
+
+.comment {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.even{
+	background: #ececec;
+}
+
+.reply {
+	color: #ffffff;
+	font-size: 20px;
+	padding: 15px;
+	text-decoration: none;
+	background-color: #eb6826;
+	border-radius: 6px;
+	box-shadow: 0;
+	width: 100px;
+}
+
+.reply:hover {
+	background-color: #eb9e77; 
+}
+
+/* Pagination Style */
+
+.sin-pagination{
+	margin-top: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+.sin-pagination-navigation li a,
+.sin-pagination-navigation li a:hover,
+.sin-pagination-navigation li.sin-pagination-active a,
+.sin-pagination-navigation li.disabled {
+    
+    color: #ffffff;
+    text-decoration:none;
+}
+ 
+.sin-pagination-navigation li {
+    display: inline;
+}
+ 
+.sin-pagination-navigation li a,
+.sin-pagination-navigation li a:hover,
+.sin-pagination-navigation li.sin-pagination-active a,
+.sin-pagination-navigation li.disabled {
+    background-color: #eb9e77;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 12px;
+    padding: 0.75rem;
+}
+ 
+.sin-pagination-navigation li a:hover,
+.sin-pagination-navigation li.sin-pagination-active a {
+    background-color: #eb6826;
+}
+eb6826
